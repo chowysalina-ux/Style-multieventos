@@ -99,10 +99,19 @@
           <i class="fa-brands fa-whatsapp mr-3 text-xl" aria-hidden="true"></i>
           Consultar disponibilidad
         </a>
-        <button onclick="openVideoModal()" class="inline-flex items-center justify-center bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white px-6 py-4 rounded-[var(--button-rounded-radius)] font-semibold text-lg hover:bg-white/20 transition-all">
-          <i class="fa-solid fa-play mr-3" aria-hidden="true"></i>
-          Ver evento real (16s)
-        </button>
+        <button onclick="openVideo()">▶ Ver evento real (16s)</button>
+
+<div id="videoBox" style="display:none; margin-top:20px;">
+  <video controls autoplay width="100%">
+    <source src="/style.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+function openVideo() {
+  document.getElementById("videoBox").style.display = "block";
+}
+</script>
       </div>
 
       <!-- Trust Indicators -->
